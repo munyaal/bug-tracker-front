@@ -1,11 +1,30 @@
+<!--header-->
+<mat-toolbar class="bg-white flex justify-between">
+    <button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon class="items-center align-middle">
+            <span class="text-black text-4xl items-center" (click)="drawer.toggle()">
+                menu
+                </span>
+        </mat-icon>
+    </button>
+    <div class="flex flex-row">
+
+        <h1>
+            Nombre de usuario
+        </h1>
+        <mat-icon class="text-2xl">keyboard_arrow_down</mat-icon>
+    </div>
+
+</mat-toolbar>
+<!--header close-->
 <!--sideNav-->
-<mat-drawer-container class="h-full" [hasBackdrop]="true">
+<mat-drawer-container class="h-full">
 
-    <mat-drawer class="w-80" #drawer>
+    <mat-drawer mode="side" class="w-80" #drawer opened>
         <!--CONTAINER-->
-        <div class=" p-5 w-full h-full">
+        <h3 class="text-black text-center">MENU</h3>
+        <div class="pr-5 pl-5 pb-5 pt-5 w-full h-">
 
-            <h3 class="text-black text-center">MENU</h3>
 
             <!--SINGLE ITEM-->
             <a routerLink="" class="mb-8 text-lg flex flex-wrap items-center cursor-pointer">
@@ -133,26 +152,7 @@
     </mat-drawer>
     <!--ITEM FINISH-->
 
-    <mat-drawer-content>
-        <!--header-->
-        <mat-toolbar class=" shadow-md flex justify-between">
-            <button class="example-icon" aria-label="Example icon-button with menu icon">
-                <mat-icon class="items-center align-middle">
-                    <span class="text-black text-4xl items-center" (click)="drawer.toggle()">
-                        menu
-                        </span>
-                </mat-icon>
-            </button>
-            <div class="flex flex-row">
-
-                <h1>
-                    Nombre de usuario
-                </h1>
-                <mat-icon class="text-2xl">keyboard_arrow_down</mat-icon>
-            </div>
-
-        </mat-toolbar>
-        <!--header close-->
+    <mat-drawer-content class="bg-gray-100">
         <!--OUTLET-->
         <router-outlet></router-outlet>
         <!--OUTLET close-->
