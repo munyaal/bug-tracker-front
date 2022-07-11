@@ -1,0 +1,240 @@
+<!--header-->
+
+<mat-toolbar
+  class="fixed z-20 bg-white mat-elevation-z4 justify-between align-middle right-0"
+>
+  <!-- TITLE -->
+  <a class="h-12 items-center text-2xl flex cursor-pointer">
+    <div class="mr-8 w-11 h-11 relative">
+      <mat-icon
+        (click)="drawer.toggle()"
+        class="absolute top-0 bottom-0 left-0 right-0 m-auto"
+      >
+        <span class="txt-orange"> menu </span>
+      </mat-icon>
+    </div>
+    Angular examples
+  </a>
+
+  <a class="h-12 text-lg flex flex-wrap items-center cursor-pointer">
+    <div class="w-8 h-8 rounded-full bg-white relative">
+      <mat-icon class="absolute top-0 bottom-0 left-0 right-0 m-auto">
+        <span class="txt-orange"> notifications_none </span>
+      </mat-icon>
+    </div>
+    <span class="bg-slate-300 h-4/5 w-[1px] ml-2 mr-2"></span>
+    <a
+      mat-button
+      [matMenuTriggerFor]="menu"
+      class="h-12 text-lg flex flex-wrap items-center cursor-pointer"
+    >
+      <div class="w-8 h-8 rounded-full bg-white relative">
+        <mat-icon class="absolute top-0 bottom-0 left-0 right-0 m-auto">
+          <span class="txt-orange"> person </span>
+        </mat-icon>
+      </div>
+    </a>
+  </a>
+
+  <mat-menu #menu="matMenu">
+    <div class="bg-slate-50 w-64">
+      <!-- section header -->
+      <div class="p-5 flex flex-col">
+        <!-- mat icon -->
+        <a class="flex justify-center cursor-pointer">
+          <mat-icon
+            class="rounded-full"
+            [style.width.px]="80"
+            [style.height.px]="80"
+          >
+            <span class="text-black items-center" [style.fontSize.px]="80">
+              face
+            </span>
+          </mat-icon>
+        </a>
+        <!-- mat icon END -->
+        <a class="no-underline font-medium text-xl mx-auto">
+          Nombre de usuario
+        </a>
+        <a class="no-underline font-light text-sm mx-auto">
+          example@dominio.com
+        </a>
+        <a
+          class="no-underline cursor-pointer font-normal text-sm mx-auto mt-2 p-1 border border-black rounded-2xl"
+          >Configurar cuenta</a
+        >
+      </div>
+      <!-- section header END -->
+
+      <mat-divider></mat-divider>
+
+      <div class="px-2">
+        <a class="no-underline text-sm mx-auto cursor-pointer">cerrar sesion</a>
+      </div>
+    </div>
+  </mat-menu>
+</mat-toolbar>
+
+<!--header close-->
+
+<!--sideNav-->
+<mat-sidenav-container class="h top-[4rem]">
+  <mat-sidenav mode="side" class="bg-blue w-96" #drawer opened>
+    <!--CONTAINER-->
+    <div class="p-5 w-full text-white">
+      <!--SINGLE ITEM-->
+      <a routerLink="inicio" class="h-12 items-center text-lg flex cursor-pointer">
+        <div class="mr-4 w-8 h-8 rounded-full bg-white relative">
+          <mat-icon class="absolute top-0 bottom-0 left-0 right-0 m-auto">
+            <span class="txt-orange"> dashboard </span>
+          </mat-icon>
+        </div>
+        Panel de control
+      </a>
+
+      <!--SINGLE ITEM-->
+      <a
+        routerLink="incidentes"
+        class="h-12 items-center text-lg flex cursor-pointer"
+      >
+        <div class="mr-4 w-8 h-8 rounded-full bg-white relative">
+          <mat-icon class="absolute top-0 bottom-0 left-0 right-0 m-auto">
+            <span class="txt-orange"> bubble_chart </span>
+          </mat-icon>
+        </div>
+        Incidentes
+      </a>
+
+      <!--SINGLE ITEM-->
+      <a
+        routerLink="proyectos"
+        class="h-12 items-center text-lg flex cursor-pointer"
+      >
+        <div class="mr-4 w-8 h-8 rounded-full bg-white relative">
+          <mat-icon class="absolute top-0 bottom-0 left-0 right-0 m-auto">
+            <span class="txt-orange"> ballot </span>
+          </mat-icon>
+        </div>
+        Proyectos
+      </a>
+
+      <!--EXPANDABLE ITEM-->
+      <mat-accordion multi="true" class="w-full">
+        <!-- exterior of the expandable -->
+        <mat-expansion-panel class="text-white bg-blue mat-elevation-z0">
+          <mat-expansion-panel-header class="p-5 flex h-11 justify-between">
+            <mat-panel-title class="text-white">
+              <div class="mr-4 w-8 h-8 rounded-full bg-white relative">
+                <mat-icon class="absolute top-0 bottom-0 left-0 right-0 m-auto">
+                  <span class="txt-orange"> settings </span>
+                </mat-icon>
+              </div>
+              <a class="text-lg"> Configuraciones </a>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <!-- Interior of the expandable -->
+
+          <!--INSIDE SINGLE ITEM-->
+          <a
+            routerLink="settings/status"
+            class="h-12 text-lg flex flex-nowrap items-center cursor-pointer"
+          >
+            <div class="mr-4 w-8 h-8 rounded-full bg-white relative">
+              <mat-icon class="absolute top-0 bottom-0 left-0 right-0 m-auto">
+                <span class="txt-orange"> offline_pin </span>
+              </mat-icon>
+            </div>
+            Estatus del reporte
+          </a>
+          <!--INSIDE SINGLE ITEM-->
+          <a
+            routerLink="settings/status"
+            class="h-12 text-lg flex flex-nowrap items-center cursor-pointer"
+          >
+            <div class="mr-4 w-8 h-8 rounded-full bg-white relative">
+              <mat-icon class="absolute top-0 bottom-0 left-0 right-0 m-auto">
+                <span class="txt-orange"> list </span>
+              </mat-icon>
+            </div>
+            Tipos de reporte
+          </a>
+
+          <!--INSIDE EXPANDABLE ITEM-->
+          <mat-expansion-panel class="text-white pr-1 bg-blue mat-elevation-z0">
+            <mat-expansion-panel-header class="flex h-11 justify-between">
+              <mat-panel-title class="text-white">
+                <div class="mr-4 w-8 h-8 rounded-full bg-white relative">
+                  <mat-icon
+                    class="absolute top-0 bottom-0 left-0 right-0 m-auto"
+                  >
+                    <span class="txt-orange"> lock </span>
+                  </mat-icon>
+                </div>
+                <a class="text-lg"> Accesos </a>
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <!-- Interior of the expandable -->
+            <!-- -INSIDE SINGLE ITEM -->
+            <a
+              routerLink="settings/acces/actions"
+              class="h-12 text-lg flex flex-wrap items-center cursor-pointer"
+            >
+              <div class="mr-4 w-8 h-8 rounded-full bg-white relative">
+                <mat-icon class="absolute top-0 bottom-0 left-0 right-0 m-auto">
+                  <span class="txt-orange"> mouse </span>
+                </mat-icon>
+              </div>
+              Acciones
+            </a>
+            <!-- -INSIDE SINGLE ITEM -->
+            <a
+              routerLink="settings/acces/routes"
+              class="h-12 text-lg flex flex-wrap items-center cursor-pointer"
+            >
+              <div class="mr-4 w-8 h-8 rounded-full bg-white relative">
+                <mat-icon class="absolute top-0 bottom-0 left-0 right-0 m-auto">
+                  <span class="txt-orange"> open_with </span>
+                </mat-icon>
+              </div>
+              Rutas
+            </a>
+            <!-- -INSIDE SINGLE ITEM -->
+            <a
+              routerLink="settings/acces/roles"
+              class="h-12 text-lg flex flex-wrap items-center cursor-pointer"
+            >
+              <div class="mr-4 w-8 h-8 rounded-full bg-white relative">
+                <mat-icon class="absolute top-0 bottom-0 left-0 right-0 m-auto">
+                  <span class="txt-orange"> verified_user </span>
+                </mat-icon>
+              </div>
+              Roles
+            </a>
+            <!-- -INSIDE SINGLE ITEM -->
+            <a
+              routerLink="settings/acces/users"
+              class="h-12 text-lg flex flex-wrap items-center cursor-pointer"
+            >
+              <div class="mr-4 w-8 h-8 rounded-full bg-white relative">
+                <mat-icon class="absolute top-0 bottom-0 left-0 right-0 m-auto">
+                  <span class="txt-orange"> supervisor_account </span>
+                </mat-icon>
+              </div>
+              Usuarios
+            </a>
+          </mat-expansion-panel>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
+    <!--CONTAINER FINISH-->
+  </mat-sidenav>
+  <!--ITEM FINISH-->
+  <mat-sidenav-content class="p-10 bg-[#F1F4F9]">
+    <!--OUTLET-->
+    <div class="w-full m-auto rounded-lg bg-white p-3">
+      <router-outlet></router-outlet>
+    </div>
+    <!--OUTLET close-->
+  </mat-sidenav-content>
+</mat-sidenav-container>
+<!--sideNav close-->

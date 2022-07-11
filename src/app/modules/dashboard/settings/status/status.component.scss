@@ -1,0 +1,26 @@
+h1,h2,h3,h4,h5.h6,p{
+    margin: 0;
+}
+mat-icon {
+    display: flex;
+}
+.icon28{
+    height: 30px;
+    width: 30px;
+}
+mat-drawer{
+    position: fixed;
+    top: 64px;
+}
+mat-expansion-panel-header{
+    padding: 0;
+}
+.bg-blue{
+    background: #4B75A7;
+}
+.txt-orange{
+    color: #F24E1E;
+}
+.h{
+    height: calc(100vh - 4rem);
+}
