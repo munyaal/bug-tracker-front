@@ -1,0 +1,42 @@
+[
+    {
+        "titulo":"Problema de inicio de sesión",
+        "user":"@Pablo2324",
+        "fecha":"11:25pm 21 de junio del 2021",
+        "estadoColor":"#4BA765",
+        "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas pariatur alias enim, velit, architecto tempora minus repellat id odit nostrum provident nulla, molestiae fugiat? Quo facere sunt adipisci excepturi tempore?",
+        "image":"blob:https://web.telegram.org/42f72fbd-254f-4aa8-85a1-7a500196f4b1"
+    },
+    {
+        "titulo":"Problema de visualizacion de incidentes",
+        "user":"@ReD965263",
+        "fecha":"12:25pm 02 de julio del 2022",
+        "estadoColor":"#4BA765",
+        "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas pariatur alias enim, velit, architecto tempora minus repellat id odit nostrum provident nulla, molestiae fugiat? Quo facere sunt adipisci excepturi tempore?",
+        "image":"blob:https://web.telegram.org/42f72fbd-254f-4aa8-85a1-7a500196f4b1"
+    },
+    {
+        "titulo":"Problema de inicio de creacion de incidentes",
+        "user":"@puff1154",
+        "fecha":"12:25pm 02 de julio del 2022",
+        "estadoColor":"#4BA765",
+        "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas pariatur alias enim, velit, architecto tempora minus repellat id odit nostrum provident nulla, molestiae fugiat? Quo facere sunt adipisci excepturi tempore?",
+        "image":"blob:https://web.telegram.org/42f72fbd-254f-4aa8-85a1-7a500196f4b1"
+    },
+    {
+        "titulo":"Problema de carga de la paguina",
+        "user":"@leD1522",
+        "fecha":"12:25pm 02 de julio del 2022",
+        "estadoColor":"#4BA765",
+        "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas pariatur alias enim, velit, architecto tempora minus repellat id odit nostrum provident nulla, molestiae fugiat? Quo facere sunt adipisci excepturi tempore?",
+        "image":"blob:https://web.telegram.org/42f72fbd-254f-4aa8-85a1-7a500196f4b1"
+    },
+    {
+        "titulo":"Problema con los estados",
+        "user":"@ASD_15SSD",
+        "fecha":"02:25am 31 de febrero del 2007",
+        "estadoColor":"#4BA765",
+        "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas pariatur alias enim, velit, architecto tempora minus repellat id odit nostrum provident nulla, molestiae fugiat? Quo facere sunt adipisci excepturi tempore?",
+        "image":"blob:https://web.telegram.org/42f72fbd-254f-4aa8-85a1-7a500196f4b1"
+    }
+]

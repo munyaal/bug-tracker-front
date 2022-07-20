@@ -7,7 +7,6 @@ import { ActionsComponent } from './actions.component';
 
 @NgModule({
   declarations: [
-    ActionsComponent
   ],
   imports: [
     CommonModule,

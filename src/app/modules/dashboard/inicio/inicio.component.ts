@@ -1,11 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
-export interface Tile {
-  color: string;
-  cols: number;
-  rows: number;
-  text: string;
-}
+import { cardModel } from 'src/app/models/cardModel';
+import { CardService } from 'src/app/services/cardService.service';
 
 @Component({
   selector: 'app-inicio',
@@ -13,19 +8,18 @@ export interface Tile {
   styleUrls: ['./inicio.component.scss']
 })
 export class InicioComponent implements OnInit {
-
-  tiles: Tile[] = [
-    {text: 'One', cols: 3, rows: 1, color: 'lightblue'},
-    {text: 'Two', cols: 1, rows: 2, color: 'lightgreen'},
-    {text: 'Three', cols: 1, rows: 1, color: 'lightpink'},
-    {text: 'Four', cols: 2, rows: 1, color: '#DDBDF1'},
-  ];
-
-  panelOpenState = false;
-  
-  constructor() { }
+    card:cardModel[]=[];
+  constructor(private _cardService: CardService) { }
 
   ngOnInit(): void {
+    this.loadCard();
+  }
+
+  loadCard(){
+    this._cardService.getCard().subscribe(data=>{
+      console.log(data);
+      this.card=data;
+    })
   }
 
 }

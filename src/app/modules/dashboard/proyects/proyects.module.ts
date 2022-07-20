@@ -7,7 +7,6 @@ import { ProyectsComponent } from './proyects.component';
 
 @NgModule({
   declarations: [
-    ProyectsComponent
   ],
   imports: [
     CommonModule,

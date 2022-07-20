@@ -7,7 +7,6 @@ import { RoutesComponent } from './routes.component';
 
 @NgModule({
   declarations: [
-    RoutesComponent
   ],
   imports: [
     CommonModule,

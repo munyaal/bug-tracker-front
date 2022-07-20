@@ -1,0 +1,17 @@
+<div class="m-5">
+  <mat-card>
+    <mat-card-title-group>
+      <div class="w-full">
+        <mat-card-title>
+          <ng-content select="[title]"></ng-content>
+        </mat-card-title>
+        <mat-card-subtitle>
+          <ng-content select="[subTitle]"></ng-content>
+        </mat-card-subtitle>
+      </div>
+    </mat-card-title-group>
+    <mat-card-content>
+      <ng-content select="[content]"></ng-content>
+    </mat-card-content>
+  </mat-card>
+</div>

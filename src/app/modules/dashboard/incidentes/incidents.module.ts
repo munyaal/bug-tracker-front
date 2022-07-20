@@ -7,11 +7,10 @@ import { IncidentsComponent } from './incidents.component';
 
 @NgModule({
   declarations: [
-    IncidentsComponent
   ],
   imports: [
     CommonModule,
     IncidentsRoutingModule
   ]
 })
-export class IncidentesModule { }
+export class IncidentsModule { }

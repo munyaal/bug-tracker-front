@@ -1,16 +1,16 @@
-<!-- titlee -->
-<div class="p-3 text-3xl">
+<app-card>
+  <!-- titlee -->
+  <div title class="p-3 text-3xl">
     Lista de estados y Servicios
     <mat-divider></mat-divider>
   </div>
   <!-- Search -->
-  <div class="w-full p-3 flex">
+  <div subTitle class="w-full p-3 flex">
     <input
-      class="w-full bg-[#F1F4F9] p-3 rounded"
-      matInput
-      (keyup)="applyFilter($event)"
-      placeholder="Search"
-      #input
+    class="w-full bg-[#F1F4F9] p-3 rounded"
+    (keyup)="applyFilter($event)"
+    placeholder="Search"
+    #input
       autocomplete="off"
     />
     <!--SINGLE ITEM-->
@@ -28,38 +28,38 @@
     </a>
   </div>
   <!-- Container -->
-  <div class="p-3 rounded">
+  <div content class="p-3 rounded">
     <mat-table
-      [dataSource]="dataSource"
-      class="h-full w-full border-2 rounded"
-      matSort
+    [dataSource]="dataSource"
+    class="h-full w-full border-2 rounded"
+    matSort
     >
-      <!-- Column -->
-      <ng-container matColumnDef="folio" class="">
-        <mat-header-cell *matHeaderCellDef mat-sort-header>folio</mat-header-cell>
-        <mat-cell *matCellDef="let element">{{ element.folio }}</mat-cell>
-      </ng-container>
-  
-      <!-- Column -->
-      <ng-container matColumnDef="name">
-        <mat-header-cell *matHeaderCellDef mat-sort-header>Name</mat-header-cell>
-        <mat-cell *matCellDef="let element">{{ element.name }}</mat-cell>
-      </ng-container>
+    <!-- Column -->
+    <ng-container matColumnDef="folio" class="">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>folio</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{ element.folio }}</mat-cell>
+    </ng-container>
+    
+    <!-- Column -->
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Name</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{ element.name }}</mat-cell>
+    </ng-container>
   
       <!-- Column -->
       <ng-container matColumnDef="date">
         <mat-header-cell *matHeaderCellDef mat-sort-header>Date</mat-header-cell>
         <mat-cell *matCellDef="let element">{{ element.date }}</mat-cell>
       </ng-container>
-  
+      
       <!-- Column -->
       <ng-container matColumnDef="gender">
         <mat-header-cell *matHeaderCellDef mat-sort-header
-          >Gender</mat-header-cell
+        >Gender</mat-header-cell
         >
         <mat-cell *matCellDef="let element">{{ element.gender }}</mat-cell>
       </ng-container>
-  
+      
       <!-- Column -->
       <ng-container matColumnDef="acciones">
         <mat-header-cell *matHeaderCellDef mat-sort-header></mat-header-cell>
@@ -89,4 +89,4 @@
     <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons>
     </mat-paginator>
   </div>
-  
+</app-card>
